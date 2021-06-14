@@ -8,7 +8,7 @@ import Auth from '../../components/auth/auth.jsx';
 import Dashboard from '../../components/dashboard/dashboard.jsx';
 import Page from '../../layouts/page.jsx';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <div className='page'>
@@ -16,9 +16,19 @@ function App() {
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
-          <Route path='/addTransaction'>
+          <Route path='/transactions'>
             <Page>
-              <div>Добавить</div>
+              <div>Транзакции</div>
+            </Page>
+          </Route>
+          <Route path='/reports'>
+            <Page>
+              <div>Отчеты</div>
+            </Page>
+          </Route>
+          <Route path='/categories'>
+            <Page>
+              <div>Категории</div>
             </Page>
           </Route>
           <Route path='/auth'>
@@ -34,5 +44,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
