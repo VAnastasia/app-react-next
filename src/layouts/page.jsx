@@ -1,38 +1,25 @@
-import React from "react";
-import {Link as LinkRouter} from "react-router-dom";
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import React from 'react';
+import {Link as LinkRouter} from 'react-router-dom';
+import Copyright from '../components/copyright/copyright.jsx';
 
-const Page = ({children}) => {
-  function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {`Copyright © `}
-        <Link color="inherit" href="#">
-          Your Website
-        </Link>{` `}
-        {new Date().getFullYear()}
-        {`.`}
-      </Typography>
-    );
-  }
+export default function Page({children}) {
   return (
     <>
       <header>
-        <nav className="page__nav">
+        <nav className='page__nav'>
           <ul>
             <li>
-              <LinkRouter to="/">Главная</LinkRouter>
+              <LinkRouter to='/'>Главная</LinkRouter>
             </li>
             <li>
-              <LinkRouter to="/dashboard">Дашборд</LinkRouter>
+              <LinkRouter to='/dashboard'>Дашборд</LinkRouter>
             </li>
             <li>
-              <LinkRouter to="/addTransaction">Добавить</LinkRouter>
+              <LinkRouter to='/addTransaction'>Добавить</LinkRouter>
             </li>
             <li>
-              <LinkRouter to="/auth">Авторизация</LinkRouter>
+              <LinkRouter to='/auth'>Авторизация</LinkRouter>
             </li>
           </ul>
         </nav>
@@ -47,6 +34,4 @@ const Page = ({children}) => {
       </footer>
     </>
   );
-};
-
-export default Page;
+}

@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react';
 import {
+  Route,
   BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Page from "../../layouts/page.jsx";
-import Auth from "../../components/auth/auth.jsx";
-import Dashboard from "../../components/dashboard/dashboard.jsx";
+  Switch
+} from 'react-router-dom';
+import Auth from '../../components/auth/auth.jsx';
+import Dashboard from '../../components/dashboard/dashboard.jsx';
+import Page from '../../layouts/page.jsx';
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <div className="page">
+      <div className='page'>
         <Switch>
-          <Route path="/dashboard">
+          <Route path='/dashboard'>
             <Dashboard />
           </Route>
-          <Route path="/addTransaction">
+          <Route path='/addTransaction'>
             <Page>
               <div>Добавить</div>
             </Page>
           </Route>
-          <Route path="/auth">
+          <Route path='/auth'>
             <Auth/>
           </Route>
-          <Route path="/">
+          <Route path='/'>
             <Page>
               <div>Главная</div>
             </Page>
@@ -33,6 +33,6 @@ const App = () => {
       </div>
     </Router>
   );
-};
+}
 
 export default App;
