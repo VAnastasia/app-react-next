@@ -40,3 +40,12 @@ body {
 .active-link {
   color: rgb(10, 10, 109);
 }
+
+.table {
+  min-width: 500px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}

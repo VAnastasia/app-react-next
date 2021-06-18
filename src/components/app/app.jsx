@@ -7,6 +7,28 @@ import {
 import Auth from '../../components/auth/auth.jsx';
 import Dashboard from '../../components/dashboard/dashboard.jsx';
 import Page from '../../layouts/page.jsx';
+import AddCategory from '../add-category/add-category.jsx';
+import AddTansaction from '../add-transaction/add-transaction.jsx';
+import Categories from '../categories/categories.jsx';
+import Transactions from '../transactions/transactions.jsx';
+
+const transactions = [
+  {
+    id: 1, date: '2021-06-15', kind: 1, category: 1, sum: 1000, source: 1,
+  },
+];
+
+const categories = [
+  {
+    id: 1, name: 'Категория 1', income: true, expense: false,
+  },
+  {
+    id: 2, name: 'Категория 2', income: false, expense: true,
+  },
+  {
+    id: 3, name: 'Категория 3', income: true, expense: true,
+  },
+];
 
 export default function App() {
   return (
@@ -16,9 +38,14 @@ export default function App() {
           <Route path='/dashboard'>
             <Dashboard />
           </Route>
+          <Route path='/addTransaction'>
+            <Page>
+              <AddTansaction />
+            </Page>
+          </Route>
           <Route path='/transactions'>
             <Page>
-              <div>Транзакции</div>
+              <Transactions transactions={transactions} />
             </Page>
           </Route>
           <Route path='/reports'>
@@ -26,9 +53,14 @@ export default function App() {
               <div>Отчеты</div>
             </Page>
           </Route>
+          <Route path='/addCategory'>
+            <Page>
+              <AddCategory />
+            </Page>
+          </Route>
           <Route path='/categories'>
             <Page>
-              <div>Категории</div>
+              <Categories categories={categories} />
             </Page>
           </Route>
           <Route path='/auth'>
