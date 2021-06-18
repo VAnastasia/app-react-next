@@ -31,8 +31,8 @@ export default function Categories({categories}) {
                 inputProps={{ 'aria-label': 'Расход' }}
               />
             </td>
-
-          </tr>))}
+          </tr>),
+        )}
       </table>
     </>
   );

@@ -65,13 +65,11 @@ export default function AddCategory() {
             label='Расход'
           />
         </Grid>
-
         <Grid item className={classes.formControl}>
           <Grid container justify='space-between'>
             <Button variant='contained' color='primary' type='submit'>
               Сохранить
             </Button>
-
           </Grid>
         </Grid>
       </form>

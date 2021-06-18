@@ -153,10 +153,7 @@ export default function AddTansaction() {
             </Button>
           </Grid>
         </Grid>
-
-
       </form>
     </Grid>
-
   );
 }
