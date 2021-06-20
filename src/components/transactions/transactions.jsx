@@ -1,11 +1,10 @@
-//import List from '@material-ui/core/List';
 import React from 'react';
-import {Link as LinkRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Transactions({transactions}) {
   return (
     <>
-      <LinkRouter to='/addTransaction'>Добавить транзакцию</LinkRouter>
+      <Link to='/addTransaction'>Добавить транзакцию</Link>
       <ul>
         {transactions.map(({id, date, kind, category, sum, source, comment}) => (
           <li key={id}>

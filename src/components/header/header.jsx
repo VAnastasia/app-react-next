@@ -1,7 +1,6 @@
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
+import {AppBar, Typography}  from '@material-ui/core';
 import React from 'react';
-import {Link as LinkRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -9,34 +8,34 @@ export default function Header() {
       <nav className='page__nav'>
         <ul>
           <li>
-            <LinkRouter to='/'>
+            <Link to='/'>
               <Typography variant='h6' component='span'>Главная</Typography>
-            </LinkRouter>
+            </Link>
           </li>
           <li>
-            <LinkRouter to='/dashboard'>
+            <Link to='/dashboard'>
               <Typography variant='h6' component='span'>Дашборд</Typography>
-            </LinkRouter>
+            </Link>
           </li>
           <li>
-            <LinkRouter to='/transactions'>
+            <Link to='/transactions'>
               <Typography variant='h6' component='span'>Транзакции</Typography>
-            </LinkRouter>
+            </Link>
           </li>
           <li>
-            <LinkRouter to='/reports'>
+            <Link to='/reports'>
               <Typography variant='h6' component='span'>Отчеты</Typography>
-            </LinkRouter>
+            </Link>
           </li>
           <li>
-            <LinkRouter to='/categories'>
+            <Link to='/categories'>
               <Typography variant='h6' component='span'>Категории</Typography>
-            </LinkRouter>
+            </Link>
           </li>
           <li>
-            <LinkRouter to='/auth'>
+            <Link to='/auth'>
               <Typography variant='h6' component='span'>Авторизация</Typography>
-            </LinkRouter>
+            </Link>
           </li>
         </ul>
       </nav>

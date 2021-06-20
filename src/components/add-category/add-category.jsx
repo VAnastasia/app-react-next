@@ -1,9 +1,10 @@
-
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Grid,
+  TextField
+} from '@material-ui/core';
 import React from 'react';
 import {useStyles} from './style.js';
 
