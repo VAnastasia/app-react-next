@@ -30,43 +30,54 @@ const categories = [
   },
 ];
 
+const Path = {
+  dashboard: '/dashboard',
+  addTransaction: '/addTransaction',
+  transactions: '/transactions',
+  reports: '/reports',
+  addCategory: '/addCategory',
+  categories: '/categories',
+  auth: '/auth',
+  main: '/',
+};
+
 export default function App() {
   return (
     <Router>
       <div className='page'>
         <Switch>
-          <Route path='/dashboard'>
+          <Route path={Path.dashboard}>
             <Dashboard />
           </Route>
-          <Route path='/addTransaction'>
+          <Route path={Path.addTransaction}>
             <Page>
               <AddTansaction />
             </Page>
           </Route>
-          <Route path='/transactions'>
+          <Route path={Path.transactions}>
             <Page>
               <Transactions transactions={transactions} />
             </Page>
           </Route>
-          <Route path='/reports'>
+          <Route path={Path.reports}>
             <Page>
               <div>Отчеты</div>
             </Page>
           </Route>
-          <Route path='/addCategory'>
+          <Route path={Path.addCategory}>
             <Page>
               <AddCategory />
             </Page>
           </Route>
-          <Route path='/categories'>
+          <Route path={Path.categories}>
             <Page>
               <Categories categories={categories} />
             </Page>
           </Route>
-          <Route path='/auth'>
+          <Route path={Path.auth}>
             <Auth/>
           </Route>
-          <Route path='/'>
+          <Route path={Path.main}>
             <Page>
               <div>Главная</div>
             </Page>
