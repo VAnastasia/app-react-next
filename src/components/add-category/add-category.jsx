@@ -10,20 +10,14 @@ import {useStyles} from './style.js';
 
 export default function AddCategory() {
   const classes = useStyles();
-  const [name, setName] = React.useState('');
-  const [income, setIncome] = React.useState(false);
-  const [expense, setExpense] = React.useState(false);
+  const form = React.createRef();
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleIncomeChange = (event) => {
-    setIncome(event.target.checked);
-  };
-
-  const handleExpenseChange = (event) => {
-    setExpense(event.target.checked);
+  const handleChange = () => {
+    const formData = {
+      name: form.current.name.value,
+      income: form.current.income.checked,
+      expense: form.current.expense.checked,
+    };
   };
 
   const handleSubmit = (event) => {
@@ -32,24 +26,21 @@ export default function AddCategory() {
 
   return (
     <Grid container direction='column' alignItems='center' justify='center' className={classes.container}>
-      <form action='' method='POST' onSubmit={handleSubmit}>
+      <form action='' method='POST' onChange={handleChange} onSubmit={handleSubmit} ref={form}>
         <Grid item>
           <TextField
             id='name'
             label='Название'
             className={classes.formControl}
-            value={name}
-            onChange={handleNameChange}
           />
         </Grid>
         <Grid container item className={classes.formControl} justify='space-between'>
           <FormControlLabel
             control={
               <Checkbox
-                checked={income}
+                name='income'
                 color='primary'
                 inputProps={{ 'aria-label': 'Доход' }}
-                onChange={handleIncomeChange}
               />
             }
             label='Доход'
@@ -57,10 +48,9 @@ export default function AddCategory() {
           <FormControlLabel
             control={
               <Checkbox
-                checked={expense}
+                name='expense'
                 color='primary'
                 inputProps={{ 'aria-label': 'Доход' }}
-                onChange={handleExpenseChange}
               />
             }
             label='Расход'
