@@ -13,11 +13,7 @@ export default function AddCategory() {
   const form = React.createRef();
 
   const handleChange = () => {
-    const formData = {
-      name: form.current.name.value,
-      income: form.current.income.checked,
-      expense: form.current.expense.checked,
-    };
+
   };
 
   const handleSubmit = (event) => {

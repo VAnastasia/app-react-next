@@ -5,7 +5,6 @@ import {
   FormControl,
   Grid,
   InputLabel,
-  MenuItem,
   Select,
   TextField
 } from '@material-ui/core';
@@ -19,35 +18,15 @@ import {useStyles} from './style.js';
 
 export default function AddTansaction() {
   const classes = useStyles();
-  const [kind, setKind] = React.useState('');
-  const [category, setCategory] = React.useState('');
-  const [source, setSource] = React.useState('');
-  const [sum, setSum] = React.useState('');
-  const [comment, setComment] = React.useState('');
+  const form = React.createRef();
   const [selectedDate, setSelectedDate] = React.useState(new Date());
-
-  const handleKindChange = (event) => {
-    setKind(event.target.value);
-  };
-
-  const handleCategoryChange = (event) => {
-    setCategory(event.target.value);
-  };
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
 
-  const handleSourceChange = (event) => {
-    setSource(event.target.value);
-  };
+  const handleChange = () => {
 
-  const handleSumChange = (event) => {
-    setSum(event.target.value);
-  };
-
-  const handleCommentChange = (event) => {
-    setComment(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -56,7 +35,7 @@ export default function AddTansaction() {
 
   return (
     <Grid container direction='column' alignItems='center' justify='center' className={classes.container}>
-      <form action='' method='POST' onSubmit={handleSubmit}>
+      <form action='' method='POST' onChange={handleChange} onSubmit={handleSubmit} ref={form}>
         <Grid container direction='column' alignItems='center' justify='center'>
           <Grid item>
             <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale} >
@@ -66,6 +45,7 @@ export default function AddTansaction() {
                 label='Дата'
                 format='dd-MM-yyyy'
                 value={selectedDate}
+                name='date'
                 onChange={handleDateChange}
                 KeyboardButtonProps={{
                   'aria-label': 'change date',
@@ -78,15 +58,16 @@ export default function AddTansaction() {
             <FormControl className={classes.formControl}>
               <InputLabel id='kind'>Вид</InputLabel>
               <Select
+                native
                 id='kind'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
-                value={kind}
-                onChange={handleKindChange}
+                name='kind'
               >
-                <MenuItem value={1}>Доход</MenuItem>
-                <MenuItem value={2}>Расход</MenuItem>
+                <option aria-label='None' value='' />
+                <option value={1}>Доход</option>
+                <option value={2}>Расход</option>
               </Select>
             </FormControl>
           </Grid>
@@ -94,15 +75,16 @@ export default function AddTansaction() {
             <FormControl className={classes.formControl}>
               <InputLabel id='category'>Категория</InputLabel>
               <Select
+                native
                 id='category'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
-                value={category}
-                onChange={handleCategoryChange}
+                name='category'
               >
-                <MenuItem value={1}>Категория 1</MenuItem>
-                <MenuItem value={2}>Категория 2</MenuItem>
+                <option aria-label='None' value='' />
+                <option value={1}>Категория 1</option>
+                <option value={2}>Категория 2</option>
               </Select>
             </FormControl>
           </Grid>
@@ -111,15 +93,16 @@ export default function AddTansaction() {
             <FormControl className={classes.formControl}>
               <InputLabel id='source'>Карта/наличные</InputLabel>
               <Select
+                native
                 id='source'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
-                value={source}
-                onChange={handleSourceChange}
+                name='source'
               >
-                <MenuItem value={1}>Карта</MenuItem>
-                <MenuItem value={2}>Наличные</MenuItem>
+                <option aria-label='None' value='' />
+                <option value={1}>Карта</option>
+                <option value={2}>Наличные</option>
               </Select>
             </FormControl>
           </Grid>
@@ -129,8 +112,7 @@ export default function AddTansaction() {
             id='sum'
             label='Сумма'
             className={classes.formControl}
-            value={sum}
-            onChange={handleSumChange}
+            name='sum'
           />
         </Grid>
         <Grid item>
@@ -139,8 +121,7 @@ export default function AddTansaction() {
             label='Комментарий'
             multiline
             rowsMax={4}
-            value={comment}
-            onChange={handleCommentChange}
+            name='comment'
             className={classes.formControl}
           />
         </Grid>

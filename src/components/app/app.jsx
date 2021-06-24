@@ -31,14 +31,14 @@ const categories = [
 ];
 
 const Path = {
-  dashboard: '/dashboard',
-  addTransaction: '/addTransaction',
-  transactions: '/transactions',
-  reports: '/reports',
-  addCategory: '/addCategory',
-  categories: '/categories',
-  auth: '/auth',
-  main: '/',
+  DASHBOARD: '/dashboard',
+  ADD_TRANSACTION: '/addTransaction',
+  TRANSACTIONS: '/transactions',
+  REPORTS: '/reports',
+  ADD_CATEGORY: '/addCategory',
+  CATEGORIES: '/categories',
+  AUTH: '/auth',
+  MAIN: '/',
 };
 
 export default function App() {
@@ -46,38 +46,38 @@ export default function App() {
     <Router>
       <div className='page'>
         <Switch>
-          <Route path={Path.dashboard}>
+          <Route path={Path.DASHBOARD}>
             <Dashboard />
           </Route>
-          <Route path={Path.addTransaction}>
+          <Route path={Path.ADD_TRANSACTION}>
             <Page>
               <AddTansaction />
             </Page>
           </Route>
-          <Route path={Path.transactions}>
+          <Route path={Path.TRANSACTIONS}>
             <Page>
               <Transactions transactions={transactions} />
             </Page>
           </Route>
-          <Route path={Path.reports}>
+          <Route path={Path.REPORTS}>
             <Page>
               <div>Отчеты</div>
             </Page>
           </Route>
-          <Route path={Path.addCategory}>
+          <Route path={Path.ADD_CATEGORY}>
             <Page>
               <AddCategory />
             </Page>
           </Route>
-          <Route path={Path.categories}>
+          <Route path={Path.CATEGORIES}>
             <Page>
               <Categories categories={categories} />
             </Page>
           </Route>
-          <Route path={Path.auth}>
+          <Route path={Path.AUTH}>
             <Auth/>
           </Route>
-          <Route path={Path.main}>
+          <Route path={Path.MAIN}>
             <Page>
               <div>Главная</div>
             </Page>
