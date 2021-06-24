@@ -22,10 +22,30 @@ body {
 }
 
 .page__nav a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .page main {
   flex-grow: 1;
+  padding-top: 75px;
+}
+
+.link {
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.active-link {
+  color: rgb(10, 10, 109);
+}
+
+.table {
+  min-width: 500px;
+}
+
+.table th,
+.table td {
+  text-align: center;
 }
