@@ -2,6 +2,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+main {
+ padding-top: 80px;
+}
+
 .page {
   display: flex;
   flex-direction: column;

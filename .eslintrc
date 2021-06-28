@@ -1,0 +1,17 @@
+{
+  "extends": ["next", "next/core-web-vitals"],
+  "plugins": ["import"],
+  "rules": {
+    "quotes": [2, "single"],
+    "jsx-quotes": [2, "prefer-single"],
+    "import/order": [
+      "error",
+      {
+        "groups": [ "builtin", "external", "parent", "sibling", "index"],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
+}

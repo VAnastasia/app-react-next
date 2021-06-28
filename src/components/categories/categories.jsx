@@ -1,11 +1,11 @@
 import Radio from '@material-ui/core/Radio';
+import Link from 'next/link';
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 export default function Categories({categories}) {
   return (
     <>
-      <Link to='/addCategory'>Добавить категорию</Link>
+      <Link href='/add-category'><a>Добавить категорию</a></Link>
       <table className='table'>
         <thead>
           <tr>
