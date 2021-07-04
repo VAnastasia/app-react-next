@@ -56,7 +56,7 @@ export default function AddTansaction() {
           </Grid>
           <Grid item>
             <FormControl className={classes.formControl}>
-              <InputLabel id='kind'>Вид</InputLabel>
+              <InputLabel for='kind'>Вид</InputLabel>
               <Select
                 native
                 id='kind'
@@ -73,7 +73,7 @@ export default function AddTansaction() {
           </Grid>
           <Grid item>
             <FormControl className={classes.formControl}>
-              <InputLabel id='category'>Категория</InputLabel>
+              <InputLabel for='category'>Категория</InputLabel>
               <Select
                 native
                 id='category'
@@ -91,7 +91,7 @@ export default function AddTansaction() {
 
           <Grid item>
             <FormControl className={classes.formControl}>
-              <InputLabel id='source'>Карта/наличные</InputLabel>
+              <InputLabel for='source'>Карта/наличные</InputLabel>
               <Select
                 native
                 id='source'

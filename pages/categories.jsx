@@ -16,8 +16,8 @@ const categories = [
 
 export default function CategoriesPage () {
   return (
-  <Page>
-    <Categories categories={categories} />
-  </Page>
+    <Page>
+      <Categories categories={categories} />
+    </Page>
   )
 }
