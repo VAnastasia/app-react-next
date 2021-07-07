@@ -17,6 +17,7 @@ const categories = [
 describe('Categories', () => {
   it('renders Categories component', () => {
     render(<Categories categories={categories} />);
+
     expect(screen.getByText(/Добавить категорию/i)).toBeInTheDocument();
     expect(screen.getByText(/Название/i)).toBeInTheDocument();
     expect(screen.getByText(/Доход/i)).toBeInTheDocument();

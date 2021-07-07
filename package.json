@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "eslint": "eslint --ext .jsx --ext .js src/",
-    "test": "jest"
+    "test": "eslint && jest",
+    "test.ui": "jest"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 import React from 'react';
-import Transactions from '../src/components/transactions/transactions';
-import Page from '../src/layouts/page';
+import Transactions from '../components/transactions/transactions';
+import Page from '../layouts/page';
 
 const transactions = [
   {

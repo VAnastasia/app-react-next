@@ -65,27 +65,27 @@ export default function Dashboard() {
         <List component='nav'>
           <ListItem>
             <Link href='/' >
-              <a activeClassName='active-link' className='link'><Typography variant='subtitle1' component='span'>Главная</Typography></a>
+              <a className='link'><Typography variant='subtitle1' component='span'>Главная</Typography></a>
             </Link>
           </ListItem>
           <ListItem>
             <Link href='/dashboard'>
-              <a activeClassName='active-link' className='link'><Typography variant='subtitle1' component='span'>Дашборд</Typography></a>
+              <a className='link'><Typography variant='subtitle1' component='span'>Дашборд</Typography></a>
             </Link>
           </ListItem>
           <ListItem>
             <Link href='/transactions' >
-              <a activeClassName='active-link' className='link'><Typography variant='subtitle1' component='span'>Транзакции</Typography></a>
+              <a className='link'><Typography variant='subtitle1' component='span'>Транзакции</Typography></a>
             </Link>
           </ListItem>
           <ListItem>
             <Link href='/reports'>
-              <a activeClassName='active-link' className='link'><Typography variant='subtitle1' component='span'>Отчеты</Typography></a>
+              <a className='link'><Typography variant='subtitle1' component='span'>Отчеты</Typography></a>
             </Link>
           </ListItem>
           <ListItem>
             <Link href='/categories'>
-              <a activeClassName='active-link' className='link'><Typography variant='subtitle1' component='span'>Категории</Typography></a>
+              <a className='link'><Typography variant='subtitle1' component='span'>Категории</Typography></a>
             </Link>
           </ListItem>
         </List>

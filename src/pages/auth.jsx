@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Auth from '../src/components/auth/auth';
+import Auth from '../components/auth/auth';
 
 export default function AuthPage () {
   return (

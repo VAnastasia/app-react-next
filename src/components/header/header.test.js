@@ -5,6 +5,7 @@ import Header from './header';
 describe('Header', () => {
   it('renders Header component', () => {
     render(<Header />);
+
     expect(screen.getByText(/Главная/i)).toBeInTheDocument();
     expect(screen.getByText(/Дашборд/i)).toBeInTheDocument();
     expect(screen.getByText(/Транзакции/i)).toBeInTheDocument();

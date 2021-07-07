@@ -1,6 +1,6 @@
 import React from 'react';
-import Categories from '../src/components/categories/categories';
-import Page from '../src/layouts/page';
+import Categories from '../components/categories/categories';
+import Page from '../layouts/page';
 
 const categories = [
   {

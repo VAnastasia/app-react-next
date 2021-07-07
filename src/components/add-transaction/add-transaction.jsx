@@ -56,10 +56,10 @@ export default function AddTansaction() {
           </Grid>
           <Grid item>
             <FormControl className={classes.formControl}>
-              <InputLabel for='kind'>Вид</InputLabel>
+              <InputLabel id='kind'>Вид</InputLabel>
               <Select
                 native
-                id='kind'
+                labelId='kind'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
@@ -73,10 +73,10 @@ export default function AddTansaction() {
           </Grid>
           <Grid item>
             <FormControl className={classes.formControl}>
-              <InputLabel for='category'>Категория</InputLabel>
+              <InputLabel id='category'>Категория</InputLabel>
               <Select
                 native
-                id='category'
+                labelId='category'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
@@ -91,10 +91,10 @@ export default function AddTansaction() {
 
           <Grid item>
             <FormControl className={classes.formControl}>
-              <InputLabel for='source'>Карта/наличные</InputLabel>
+              <InputLabel id='source'>Карта/наличные</InputLabel>
               <Select
                 native
-                id='source'
+                labelId='source'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}

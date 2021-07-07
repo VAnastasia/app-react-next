@@ -5,6 +5,7 @@ import Auth from './auth';
 describe('Auth', () => {
   it('renders Auth component', () => {
     render(<Auth />);
+
     expect(screen.getByLabelText(/Email/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Пароль/i)).toBeInTheDocument();
     expect(screen.getByText(/Запомнить меня/i)).toBeInTheDocument();

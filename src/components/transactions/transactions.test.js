@@ -11,6 +11,7 @@ const transactions = [
 describe('Transactions', () => {
   it('renders Transactions component', () => {
     render(<Transactions transactions={transactions} />);
+
     expect(screen.getByText(/Добавить транзакцию/i)).toBeInTheDocument();
     expect(screen.getByText(/Дата/i)).toBeInTheDocument();
     expect(screen.getByText(/Вид/i)).toBeInTheDocument();

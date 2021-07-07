@@ -1,6 +1,6 @@
 import React from 'react';
-import AddCategory from '../src/components/add-category/add-category';
-import Page from '../src/layouts/page'
+import AddCategory from '../components/add-category/add-category';
+import Page from '../layouts/page'
 
 export default function AddCategoryPage () {
   return (
