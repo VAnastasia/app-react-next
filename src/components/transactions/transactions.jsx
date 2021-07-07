@@ -1,10 +1,10 @@
+import Link from 'next/link';
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 export default function Transactions({transactions}) {
   return (
     <>
-      <Link to='/addTransaction'>Добавить транзакцию</Link>
+      <Link href='/add-transaction'><a>Добавить транзакцию</a></Link>
       <ul>
         {transactions.map(({id, date, kind, category, sum, source, comment}) => (
           <li key={id}>

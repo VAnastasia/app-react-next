@@ -59,7 +59,7 @@ export default function AddTansaction() {
               <InputLabel id='kind'>Вид</InputLabel>
               <Select
                 native
-                id='kind'
+                labelId='kind'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
@@ -76,7 +76,7 @@ export default function AddTansaction() {
               <InputLabel id='category'>Категория</InputLabel>
               <Select
                 native
-                id='category'
+                labelId='category'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}
@@ -94,7 +94,7 @@ export default function AddTansaction() {
               <InputLabel id='source'>Карта/наличные</InputLabel>
               <Select
                 native
-                id='source'
+                labelId='source'
                 displayEmpty
                 className={classes.selectEmpty}
                 inputProps={{ 'aria-label': 'Without label' }}

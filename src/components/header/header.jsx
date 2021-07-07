@@ -1,6 +1,6 @@
 import {AppBar, Typography}  from '@material-ui/core';
+import Link from 'next/link';
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -8,33 +8,33 @@ export default function Header() {
       <nav className='page__nav'>
         <ul>
           <li>
-            <Link to='/'>
-              <Typography variant='h6' component='span'>Главная</Typography>
+            <Link href='/'>
+              <a><Typography variant='h6' component='span'>Главная</Typography></a>
             </Link>
           </li>
           <li>
-            <Link to='/dashboard'>
-              <Typography variant='h6' component='span'>Дашборд</Typography>
+            <Link href='/dashboard'>
+              <a><Typography variant='h6' component='span'>Дашборд</Typography></a>
             </Link>
           </li>
           <li>
-            <Link to='/transactions'>
-              <Typography variant='h6' component='span'>Транзакции</Typography>
+            <Link href='/transactions'>
+              <a><Typography variant='h6' component='span'>Транзакции</Typography></a>
             </Link>
           </li>
           <li>
-            <Link to='/reports'>
-              <Typography variant='h6' component='span'>Отчеты</Typography>
+            <Link href='/reports'>
+              <a><Typography variant='h6' component='span'>Отчеты</Typography></a>
             </Link>
           </li>
           <li>
-            <Link to='/categories'>
-              <Typography variant='h6' component='span'>Категории</Typography>
+            <Link href='/categories'>
+              <a><Typography variant='h6' component='span'>Категории</Typography></a>
             </Link>
           </li>
           <li>
-            <Link to='/auth'>
-              <Typography variant='h6' component='span'>Авторизация</Typography>
+            <Link href='/auth'>
+              <a><Typography variant='h6' component='span'>Авторизация</Typography></a>
             </Link>
           </li>
         </ul>

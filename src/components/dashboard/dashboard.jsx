@@ -15,8 +15,8 @@ import {
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 import clsx from 'clsx';
+import Link from 'next/link'
 import React from 'react';
-import { NavLink  } from 'react-router-dom';
 import { useStyles } from './styles.js';
 
 
@@ -64,29 +64,29 @@ export default function Dashboard() {
         <Divider />
         <List component='nav'>
           <ListItem>
-            <NavLink to='/' exact activeClassName='active-link' className='link'>
-              <Typography variant='subtitle1' component='span'>Главная</Typography>
-            </NavLink>
+            <Link href='/' >
+              <a className='link'><Typography variant='subtitle1' component='span'>Главная</Typography></a>
+            </Link>
           </ListItem>
           <ListItem>
-            <NavLink to='/dashboard' exact activeClassName='active-link' className='link'>
-              <Typography variant='subtitle1' component='span'>Дашборд</Typography>
-            </NavLink>
+            <Link href='/dashboard'>
+              <a className='link'><Typography variant='subtitle1' component='span'>Дашборд</Typography></a>
+            </Link>
           </ListItem>
           <ListItem>
-            <NavLink to='/transactions' activeClassName='active-link' className='link'>
-              <Typography variant='subtitle1' component='span'>Транзакции</Typography>
-            </NavLink>
+            <Link href='/transactions' >
+              <a className='link'><Typography variant='subtitle1' component='span'>Транзакции</Typography></a>
+            </Link>
           </ListItem>
           <ListItem>
-            <NavLink to='/reports' activeClassName='active-link' className='link'>
-              <Typography variant='subtitle1' component='span'>Отчеты</Typography>
-            </NavLink>
+            <Link href='/reports'>
+              <a className='link'><Typography variant='subtitle1' component='span'>Отчеты</Typography></a>
+            </Link>
           </ListItem>
           <ListItem>
-            <NavLink to='/categories' activeClassName='active-link' className='link'>
-              <Typography variant='subtitle1' component='span'>Категории</Typography>
-            </NavLink>
+            <Link href='/categories'>
+              <a className='link'><Typography variant='subtitle1' component='span'>Категории</Typography></a>
+            </Link>
           </ListItem>
         </List>
       </Drawer>

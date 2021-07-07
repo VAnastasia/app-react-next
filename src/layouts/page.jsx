@@ -5,7 +5,7 @@ import Header from '../components/header/header.jsx';
 
 export default function Page({children}) {
   return (
-    <>
+    <div className='page'>
       <Header/>
       <main>
         {children}
@@ -15,6 +15,6 @@ export default function Page({children}) {
           <Copyright />
         </Box>
       </footer>
-    </>
+    </div>
   );
 }
