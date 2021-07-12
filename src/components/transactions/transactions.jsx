@@ -4,10 +4,9 @@ import React from 'react';
 export default function Transactions({transactions}) {
   return (
     <>
-      <Link href='/add-transaction'><a>Добавить транзакцию</a></Link>
-      <ul>
+      <ul className='transactions__list'>
         {transactions.map(({id, date, kind, category, sum, source, comment}) => (
-          <li key={id}>
+          <li key={id} className='transactions__item'>
             <p>Дата: {date}</p>
             <p>Вид: {kind}</p>
             <p>Категория: {category}</p>
@@ -16,6 +15,7 @@ export default function Transactions({transactions}) {
             <p>Комментарий: {comment}</p>
           </li>))}
       </ul>
+      <Link href='/add-transaction'><a className='button-link'>Добавить транзакцию</a></Link>
     </>
   );
 }

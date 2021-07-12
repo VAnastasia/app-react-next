@@ -8,21 +8,13 @@ import {
 import React from 'react';
 import {useStyles} from './style.js';
 
-export default function AddCategory() {
+export default function AddCategory({onSubmit, onChange}) {
   const classes = useStyles();
   const form = React.createRef();
 
-  const handleChange = () => {
-
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
   return (
     <Grid container direction='column' alignItems='center' justify='center' className={classes.container}>
-      <form action='' method='POST' onChange={handleChange} onSubmit={handleSubmit} ref={form}>
+      <form action='' method='POST' onChange={onChange} onSubmit={onSubmit} ref={form}>
         <Grid item>
           <TextField
             id='name'

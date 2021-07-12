@@ -16,7 +16,7 @@ import ruLocale from 'date-fns/locale/ru';
 import React from 'react';
 import {useStyles} from './style.js';
 
-export default function AddTansaction() {
+export default function AddTansaction({onSubmit, onChange}) {
   const classes = useStyles();
   const form = React.createRef();
   const [selectedDate, setSelectedDate] = React.useState(new Date());
@@ -25,17 +25,13 @@ export default function AddTansaction() {
     setSelectedDate(date);
   };
 
-  const handleChange = () => {
-
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleReset = () => {
+    setSelectedDate(new Date())
   };
 
   return (
     <Grid container direction='column' alignItems='center' justify='center' className={classes.container}>
-      <form action='' method='POST' onChange={handleChange} onSubmit={handleSubmit} ref={form}>
+      <form action='' method='POST' onChange={onChange} onSubmit={onSubmit} onReset={handleReset} ref={form}>
         <Grid container direction='column' alignItems='center' justify='center'>
           <Grid item>
             <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale} >
@@ -130,7 +126,7 @@ export default function AddTansaction() {
             <Button variant='contained' color='primary' type='submit'>
               Сохранить
             </Button>
-            <Button variant='contained' color='secondary'>
+            <Button variant='contained' color='secondary' type='reset'>
               Отменить
             </Button>
           </Grid>
