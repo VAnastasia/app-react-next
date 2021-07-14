@@ -12,7 +12,7 @@ describe('AddCategory', () => {
     expect(screen.getByText(/Сохранить/i)).toBeInTheDocument();
   });
 
-  it('sends form on save', async() => {
+  it('sends form on click button save', async () => {
     const handleSubmit = jest.fn();
     render(<AddCategory onSubmit={handleSubmit} />);
 
@@ -21,7 +21,7 @@ describe('AddCategory', () => {
     expect(handleSubmit).toHaveBeenCalled();
   });
 
-  it('changes form on change', async() => {
+  it('changes form on change', async () => {
     const handleChange = jest.fn();
     render(<AddCategory onChange={handleChange} />);
 

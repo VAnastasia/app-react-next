@@ -26,7 +26,7 @@ export default function AddTansaction({onSubmit, onChange}) {
   };
 
   const handleReset = () => {
-    setSelectedDate(new Date())
+    setSelectedDate(new Date());
   };
 
   return (
