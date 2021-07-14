@@ -13,7 +13,7 @@ describe('AddTransaction', () => {
     expect(screen.getByText(/Отменить/i)).toBeInTheDocument();
   });
 
-  it('sends form on save', async () => {
+  it('sends form on click button save', async () => {
     const handleSubmit = jest.fn();
     render(<AddTransaction onSubmit={handleSubmit} />);
 
