@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 
-export default function Transactions({transactions}) {
+const Transactions = ({transactions}) => {
   return (
     <>
+      <Link href='/add-transaction'><a className='button-link'>Добавить транзакцию</a></Link>
       <ul className='transactions__list'>
         {transactions.map(({id, date, kind, category, sum, source, comment}) => (
           <li key={id} className='transactions__item'>
@@ -15,7 +16,8 @@ export default function Transactions({transactions}) {
             <p>Комментарий: {comment}</p>
           </li>))}
       </ul>
-      <Link href='/add-transaction'><a className='button-link'>Добавить транзакцию</a></Link>
     </>
   );
 }
+
+export default Transactions;

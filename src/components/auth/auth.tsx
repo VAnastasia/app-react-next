@@ -11,10 +11,10 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import React from 'react';
-import Copyright from '../copyright/copyright.jsx';
+import Copyright from '../copyright/copyright';
 import { useStyles } from './styles.js';
 
-export default function SignIn() {
+const Auth = () => {
   const classes = useStyles();
 
   return (
@@ -83,3 +83,5 @@ export default function SignIn() {
     </Container>
   );
 }
+
+export default Auth;

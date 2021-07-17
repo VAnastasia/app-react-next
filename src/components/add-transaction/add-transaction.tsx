@@ -13,13 +13,13 @@ import {
   KeyboardDatePicker
 } from '@material-ui/pickers';
 import ruLocale from 'date-fns/locale/ru';
-import React from 'react';
+import React, {createRef, useState} from 'react';
 import {useStyles} from './style.js';
 
-export default function AddTansaction({onSubmit, onChange}) {
+const AddTansaction = ({categories, onSubmit, onChange}) => {
   const classes = useStyles();
-  const form = React.createRef();
-  const [selectedDate, setSelectedDate] = React.useState(new Date());
+  const form: React.LegacyRef<HTMLFormElement> = createRef();
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -62,8 +62,8 @@ export default function AddTansaction({onSubmit, onChange}) {
                 name='kind'
               >
                 <option aria-label='None' value='' />
-                <option value={1}>Доход</option>
-                <option value={2}>Расход</option>
+                <option value={'income'}>Доход</option>
+                <option value={'expense'}>Расход</option>
               </Select>
             </FormControl>
           </Grid>
@@ -79,8 +79,9 @@ export default function AddTansaction({onSubmit, onChange}) {
                 name='category'
               >
                 <option aria-label='None' value='' />
-                <option value={1}>Категория 1</option>
-                <option value={2}>Категория 2</option>
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>{category.name}</option>
+                ))}
               </Select>
             </FormControl>
           </Grid>
@@ -135,3 +136,5 @@ export default function AddTansaction({onSubmit, onChange}) {
     </Grid>
   );
 }
+
+export default AddTansaction;

@@ -1,6 +1,8 @@
 import React from 'react';
 import Page from '../layouts/page';
 
-export default function HomePage() {
+const HomePage = () => {
   return <Page>Главная страница</Page>;
 }
+
+export default HomePage;

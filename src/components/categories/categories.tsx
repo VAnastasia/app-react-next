@@ -2,10 +2,10 @@ import Radio from '@material-ui/core/Radio';
 import Link from 'next/link';
 import React from 'react';
 
-export default function Categories({categories}) {
+const Categories = ({categories}) => {
   return (
     <>
-
+      <Link href='/add-category'><a className='button-link'>Добавить категорию</a></Link>
       <table className='table'>
         <thead>
           <tr>
@@ -38,7 +38,8 @@ export default function Categories({categories}) {
           )}
         </tbody>
       </table>
-      <Link href='/add-category'><a className='button-link'>Добавить категорию</a></Link>
     </>
   );
 }
+
+export default Categories;

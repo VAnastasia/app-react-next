@@ -4,7 +4,7 @@ import AddTransaction from './add-transaction';
 
 describe('AddTransaction', () => {
   it('renders AddTransaction component', () => {
-    render(<AddTransaction />);
+    render(<AddTransaction categories={[]} />);
 
     expect(screen.getByLabelText(/Дата/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Сумма/i)).toBeInTheDocument();
@@ -15,7 +15,7 @@ describe('AddTransaction', () => {
 
   it('sends form on click button save', async () => {
     const handleSubmit = jest.fn();
-    render(<AddTransaction onSubmit={handleSubmit} />);
+    render(<AddTransaction categories={[]} onSubmit={handleSubmit} />);
 
     fireEvent.click(screen.getByText(/Сохранить/i));
 
@@ -24,7 +24,7 @@ describe('AddTransaction', () => {
 
   it('changes form on change', async () => {
     const handleChange = jest.fn();
-    render(<AddTransaction onChange={handleChange} />);
+    render(<AddTransaction categories={[]} onChange={handleChange} />);
 
     fireEvent.change(screen.getByLabelText(/Сумма/i), { target: { value: '1000' } });
 

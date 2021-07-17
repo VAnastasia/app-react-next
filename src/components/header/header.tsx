@@ -2,7 +2,7 @@ import {AppBar, Typography}  from '@material-ui/core';
 import Link from 'next/link';
 import React from 'react';
 
-export default function Header() {
+const Header = () => {
   return (
     <AppBar color='primary' position='fixed'>
       <nav className='page__nav'>
@@ -42,3 +42,5 @@ export default function Header() {
     </AppBar>
   );
 }
+
+export default Header;

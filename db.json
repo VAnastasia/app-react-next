@@ -1,0 +1,75 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Категория 1",
+      "income": true,
+      "expense": false
+    },
+    {
+      "id": 2,
+      "name": "Категория 2",
+      "income": false,
+      "expense": true
+    },
+    {
+      "id": 3,
+      "name": "Категория 3",
+      "income": true,
+      "expense": true
+    },
+    {
+      "name": "vdgfsdfsh",
+      "income": false,
+      "expense": true,
+      "id": 4
+    },
+    {
+      "name": "dfhfgjkg",
+      "income": true,
+      "expense": false,
+      "id": 5
+    },
+    {
+      "name": "ygkkk",
+      "income": false,
+      "expense": true,
+      "id": 6
+    },
+    {
+      "name": "test",
+      "income": true,
+      "expense": false,
+      "id": 7
+    }
+  ],
+  "transactions": [
+    {
+      "date": "14-07-2021",
+      "kind": "income",
+      "category": "1",
+      "source": "1",
+      "sum": 100000,
+      "comment": "",
+      "id": 1
+    },
+    {
+      "date": "17-07-2021",
+      "kind": "income",
+      "category": "1",
+      "source": "1",
+      "sum": 100000,
+      "comment": "",
+      "id": 2
+    },
+    {
+      "date": "17-07-2021",
+      "kind": "income",
+      "category": "3",
+      "source": "1",
+      "sum": 200000,
+      "comment": "",
+      "id": 3
+    }
+  ]
+}

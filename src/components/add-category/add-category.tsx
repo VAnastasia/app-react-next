@@ -8,9 +8,9 @@ import {
 import React from 'react';
 import {useStyles} from './style.js';
 
-export default function AddCategory({onSubmit, onChange}) {
+const AddCategory = ({onSubmit, onChange}) => {
   const classes = useStyles();
-  const form = React.createRef();
+  const form: React.LegacyRef<HTMLFormElement> = React.createRef();
 
   return (
     <Grid container direction='column' alignItems='center' justify='center' className={classes.container}>
@@ -56,3 +56,5 @@ export default function AddCategory({onSubmit, onChange}) {
 
   );
 }
+
+export default AddCategory;

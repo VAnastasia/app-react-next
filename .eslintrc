@@ -1,6 +1,6 @@
 {
-  "extends": ["next", "next/core-web-vitals"],
-  "plugins": ["import"],
+  "extends": ["next", "next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["import", "@typescript-eslint"],
   "rules": {
     "quotes": [2, "single"],
     "jsx-quotes": [2, "prefer-single"],
