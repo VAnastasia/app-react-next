@@ -1,7 +1,7 @@
+import {observer} from 'mobx-react-lite';
 import React, {useEffect} from 'react';
 import Transactions from '../components/transactions/transactions';
 import Page from '../layouts/page';
-import {observer} from 'mobx-react-lite';
 import transactionsStore from '../store/transactions';
 
 const TransactionsPage = observer(() => {

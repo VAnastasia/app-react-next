@@ -1,12 +1,12 @@
-import {useRouter} from 'next/router';
 import {observer} from 'mobx-react-lite';
+import {useRouter} from 'next/router';
 import React, {useState, useEffect} from 'react';
 import AddTransaction from '../components/add-transaction/add-transaction';
 import Page from '../layouts/page';
-import categoriesStore from '../store/categories';
 import {api} from '../service/api';
+import categoriesStore from '../store/categories';
 
-const AddTransactionPage = observer(() => {
+const AddTransactionPage: React.FunctionComponent = observer(() => {
   const {categories, fetchCategories} = categoriesStore;
   const router = useRouter();
 
@@ -16,24 +16,24 @@ const AddTransactionPage = observer(() => {
     fetchCategories();
   }, [])
 
-  const handleChange = (evt) => {
+  const handleChange = (evt: React.SyntheticEvent<EventTarget>) => {
     if (evt.target.name === 'kind' && evt.target.name) {
       setCategoriesOfKind(categories.filter((category) => category[evt.target.value]));
     } else {
       setCategoriesOfKind(categories);
-    };
+    }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (evt: React.SyntheticEvent<EventTarget>) => {
+    evt.preventDefault();
 
     const formData = {
-      date: event.target.date.value,
-      kind: event.target.kind.value,
-      category: event.target.category.value,
-      source: event.target.source.value,
-      sum: Number(event.target.sum.value),
-      comment: event.target.comment.value,
+      date: evt.target.date.value,
+      kind: evt.target.kind.value,
+      category: evt.target.category.value,
+      source: evt.target.source.value,
+      sum: Number(evt.target.sum.value),
+      comment: evt.target.comment.value,
     }
 
     if (formData.kind && formData.category && formData.source && formData.sum) {
@@ -41,7 +41,7 @@ const AddTransactionPage = observer(() => {
         .then((response) => {
           if (response) {
             router.push('/transactions');
-          };
+          }
         });
     }
   };

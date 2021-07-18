@@ -1,8 +1,13 @@
 import Radio from '@material-ui/core/Radio';
 import Link from 'next/link';
 import React from 'react';
+import {Category} from '../../types';
 
-const Categories = ({categories}) => {
+interface Props {
+  categories: Category[]
+}
+
+const Categories: React.FunctionComponent<Props> = ({categories}: Props) => {
   return (
     <>
       <Link href='/add-category'><a className='button-link'>Добавить категорию</a></Link>

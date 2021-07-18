@@ -2,7 +2,7 @@ import {AppBar, Typography}  from '@material-ui/core';
 import Link from 'next/link';
 import React from 'react';
 
-const Header = () => {
+const Header: React.FunctionComponent = () => {
   return (
     <AppBar color='primary' position='fixed'>
       <nav className='page__nav'>

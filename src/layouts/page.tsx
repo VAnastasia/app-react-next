@@ -3,7 +3,7 @@ import React from 'react';
 import Copyright from '../components/copyright/copyright';
 import Header from '../components/header/header';
 
-const Page = ({children}) => {
+const Page: React.FunctionComponent = ({children}) => {
   return (
     <div className='page'>
       <Header/>

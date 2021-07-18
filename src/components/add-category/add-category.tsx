@@ -8,7 +8,12 @@ import {
 import React from 'react';
 import {useStyles} from './style.js';
 
-const AddCategory = ({onSubmit, onChange}) => {
+interface Props {
+  onSubmit: (evt: React.SyntheticEvent<EventTarget>) => void,
+  onChange: (evt: React.SyntheticEvent<EventTarget>) => void
+}
+
+const AddCategory: React.FunctionComponent<Props> = ({onSubmit, onChange}: Props) => {
   const classes = useStyles();
   const form: React.LegacyRef<HTMLFormElement> = React.createRef();
 
@@ -17,7 +22,7 @@ const AddCategory = ({onSubmit, onChange}) => {
       <form action='' method='POST' onChange={onChange} onSubmit={onSubmit} ref={form}>
         <Grid item>
           <TextField
-            id='name'
+            id='title'
             label='Название'
             className={classes.formControl}
           />

@@ -2,7 +2,7 @@ import React from 'react';
 import Dashboard from '../components/dashboard/dashboard';
 import Page from '../layouts/page';
 
-const DashboardPage = () => {
+const DashboardPage: React.FunctionComponent = () => {
   return (
     <Page>
       <Dashboard />

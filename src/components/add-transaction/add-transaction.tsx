@@ -15,8 +15,15 @@ import {
 import ruLocale from 'date-fns/locale/ru';
 import React, {createRef, useState} from 'react';
 import {useStyles} from './style.js';
+import {Category} from '../../types';
 
-const AddTansaction = ({categories, onSubmit, onChange}) => {
+interface Props {
+  categories: Category[],
+  onSubmit: (evt: React.SyntheticEvent<EventTarget>) => void,
+  onChange: (evt: React.SyntheticEvent<EventTarget>) => void
+}
+
+const AddTansaction: React.FunctionComponent<Props> = ({categories, onSubmit, onChange}: Props) => {
   const classes = useStyles();
   const form: React.LegacyRef<HTMLFormElement> = createRef();
   const [selectedDate, setSelectedDate] = useState(new Date());

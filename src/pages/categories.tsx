@@ -1,7 +1,7 @@
+import { observer } from 'mobx-react-lite';
 import React, {useEffect} from 'react';
 import Categories from '../components/categories/categories';
 import Page from '../layouts/page';
-import { observer } from 'mobx-react-lite';
 import categoriesStore from '../store/categories';
 
 const CategoriesPage = observer(() => {

@@ -4,19 +4,19 @@ import AddCategory from '../components/add-category/add-category';
 import Page from '../layouts/page';
 import {api} from '../service/api';
 
-const AddCategoryPage = () => {
+const AddCategoryPage: React.FunctionComponent = () => {
   const router = useRouter();
 
   const handleChange = () => {
 
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (evt: React.SyntheticEvent<EventTarget>) => {
+    evt.preventDefault();
     const formData = {
-      name: event.target.name.value,
-      income: event.target.income.checked,
-      expense: event.target.expense.checked
+      name: evt.target.title.value,
+      income: evt.target.income.checked,
+      expense: evt.target.expense.checked
     };
 
     if (formData.name && (formData.expense || formData.income)) {

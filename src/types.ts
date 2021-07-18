@@ -12,6 +12,6 @@ export interface Transaction {
   category: string,
   source: string,
   sum: number,
-  comment: string,
+  comment?: string,
 }
 

@@ -14,7 +14,7 @@ import React from 'react';
 import Copyright from '../copyright/copyright';
 import { useStyles } from './styles.js';
 
-const Auth = () => {
+const Auth: React.FunctionComponent = () => {
   const classes = useStyles();
 
   return (

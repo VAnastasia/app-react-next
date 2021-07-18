@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
+import {Transaction} from '../../types';
 
-const Transactions = ({transactions}) => {
+interface Props {
+  transactions: Transaction[]
+}
+
+const Transactions: React.FunctionComponent<Props> = ({transactions}: Props) => {
   return (
     <>
       <Link href='/add-transaction'><a className='button-link'>Добавить транзакцию</a></Link>

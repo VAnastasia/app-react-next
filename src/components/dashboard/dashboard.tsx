@@ -5,7 +5,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 
-const Dashboard = () => {
+const Dashboard: React.FunctionComponent = () => {
   return (
     <div className='dashboard__wrapper'>
       <Container maxWidth='lg'>

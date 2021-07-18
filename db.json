@@ -41,6 +41,12 @@
       "income": true,
       "expense": false,
       "id": 7
+    },
+    {
+      "name": "123",
+      "income": true,
+      "expense": false,
+      "id": 8
     }
   ],
   "transactions": [

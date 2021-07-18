@@ -1,6 +1,7 @@
 {
   "extends": ["next", "next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  "plugins": ["import", "@typescript-eslint"],
+  "plugins": ["import", "react-hooks", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "quotes": [2, "single"],
     "jsx-quotes": [2, "prefer-single"],
