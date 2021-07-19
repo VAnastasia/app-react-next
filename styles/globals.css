@@ -47,10 +47,40 @@ main {
 }
 
 .table {
+  margin: 30px auto;
   min-width: 500px;
 }
 
 .table th,
 .table td {
   text-align: center;
+}
+
+.button-link {
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: block;
+  max-width: 250px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  background-color: #0b8643;
+  color: #ffffff;
+}
+
+.transactions__list {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.transactions__item {
+  display: flex;
+}
+
+.transactions__item p {
+  margin: 0;
+  padding: 5px;
 }
