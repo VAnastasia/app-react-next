@@ -1,8 +1,9 @@
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import '../styles/globals.css';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   React.useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {

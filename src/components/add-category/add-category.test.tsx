@@ -16,7 +16,6 @@ describe('AddCategory', () => {
   });
 
   it('sends form on click button save', async () => {
-
     render(<AddCategory onSubmit={handleSubmit} onChange={handleChange} />);
 
     fireEvent.click(screen.getByText(/Сохранить/i));
@@ -25,7 +24,6 @@ describe('AddCategory', () => {
   });
 
   it('changes form on change', async () => {
-
     render(<AddCategory onSubmit={handleSubmit} onChange={handleChange} />);
 
     fireEvent.change(screen.getByLabelText(/Название/i), { target: { value: 'Название' } });

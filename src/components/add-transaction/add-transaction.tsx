@@ -14,8 +14,8 @@ import {
 } from '@material-ui/pickers';
 import ruLocale from 'date-fns/locale/ru';
 import React, {createRef, useState} from 'react';
-import {useStyles} from './style.js';
 import {Category} from '../../types';
+import {useStyles} from './style.js';
 
 interface Props {
   categories: Category[],

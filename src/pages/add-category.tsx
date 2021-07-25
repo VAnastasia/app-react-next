@@ -7,9 +7,7 @@ import {api} from '../service/api';
 const AddCategoryPage: React.FunctionComponent = () => {
   const router = useRouter();
 
-  const handleChange = () => {
-
-  };
+  const handleChange = () => {};
 
   const handleSubmit = (evt: React.SyntheticEvent<EventTarget>) => {
     evt.preventDefault();
@@ -24,7 +22,7 @@ const AddCategoryPage: React.FunctionComponent = () => {
         .then((response) => {
           if (response) {
             router.push('/categories');
-          };
+          }
         })
       }
   };
