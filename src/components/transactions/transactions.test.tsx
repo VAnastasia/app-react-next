@@ -4,7 +4,7 @@ import Transactions from './transactions';
 
 const transactions = [
   {
-    id: 1, date: '2021-06-15', kind: 1, category: 1, sum: 1000, source: 1,
+    id: 1, date: '2021-06-15', kind: '1', category: '1', sum: 1000, source: '1', comment: ''
   },
 ];
 

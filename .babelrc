@@ -1,4 +1,4 @@
 {
-  "presets": ["@babel/preset-react", "next/babel"],
-  "plugins": []
+  "presets": ["@babel/preset-react", "@babel/preset-typescript", "next/babel"],
+  "plugins": [["@babel/plugin-proposal-decorators", { "legacy": true }]]
 }

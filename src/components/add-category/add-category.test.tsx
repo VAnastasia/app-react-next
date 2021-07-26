@@ -2,9 +2,12 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
 import AddCategory from './add-category';
 
+const handleSubmit = jest.fn();
+const handleChange = jest.fn();
+
 describe('AddCategory', () => {
   it('renders AddCategory component', () => {
-    render(<AddCategory />);
+    render(<AddCategory onSubmit={handleSubmit} onChange={handleChange} />);
 
     expect(screen.getByLabelText(/Название/i)).toBeInTheDocument();
     expect(screen.getByText(/Доход/i)).toBeInTheDocument();
@@ -13,8 +16,7 @@ describe('AddCategory', () => {
   });
 
   it('sends form on click button save', async () => {
-    const handleSubmit = jest.fn();
-    render(<AddCategory onSubmit={handleSubmit} />);
+    render(<AddCategory onSubmit={handleSubmit} onChange={handleChange} />);
 
     fireEvent.click(screen.getByText(/Сохранить/i));
 
@@ -22,8 +24,7 @@ describe('AddCategory', () => {
   });
 
   it('changes form on change', async () => {
-    const handleChange = jest.fn();
-    render(<AddCategory onChange={handleChange} />);
+    render(<AddCategory onSubmit={handleSubmit} onChange={handleChange} />);
 
     fireEvent.change(screen.getByLabelText(/Название/i), { target: { value: 'Название' } });
 

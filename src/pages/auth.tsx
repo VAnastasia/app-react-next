@@ -1,9 +1,10 @@
 import React from 'react';
-
 import Auth from '../components/auth/auth';
 
-export default function AuthPage () {
+const AuthPage: React.FunctionComponent = () => {
   return (
     <Auth />
   )
 }
+
+export default AuthPage;

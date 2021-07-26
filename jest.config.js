@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverageFrom: [
-    '**/*.{js,jsx}',
+    '**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
     '!**/tests/**',
     '!**/coverage/**',
@@ -31,7 +31,9 @@ module.exports = {
     '/coverage/'
   ],
   transform: {
+    "^.+\\.tsx?$": 'ts-jest',
     '^.+\\.jsx?$': 'babel-jest',
   },
   testEnvironment: 'jsdom',
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
 }

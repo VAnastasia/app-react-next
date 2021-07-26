@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import React from 'react';
+import {Transaction} from '../../types';
 
-export default function Transactions({transactions}) {
+interface Props {
+  transactions: Transaction[]
+}
+
+const Transactions: React.FunctionComponent<Props> = ({transactions}: Props) => {
   return (
     <>
+      <Link href='/add-transaction'><a className='button-link'>Добавить транзакцию</a></Link>
       <ul className='transactions__list'>
         {transactions.map(({id, date, kind, category, sum, source, comment}) => (
           <li key={id} className='transactions__item'>
@@ -15,7 +21,8 @@ export default function Transactions({transactions}) {
             <p>Комментарий: {comment}</p>
           </li>))}
       </ul>
-      <Link href='/add-transaction'><a className='button-link'>Добавить транзакцию</a></Link>
     </>
   );
 }
+
+export default Transactions;

@@ -1,9 +1,9 @@
 import Box from '@material-ui/core/Box';
 import React from 'react';
-import Copyright from '../components/copyright/copyright.jsx';
-import Header from '../components/header/header.jsx';
+import Copyright from '../components/copyright/copyright';
+import Header from '../components/header/header';
 
-export default function Page({children}) {
+const Page: React.FunctionComponent = ({children}) => {
   return (
     <div className='page'>
       <Header/>
@@ -18,3 +18,5 @@ export default function Page({children}) {
     </div>
   );
 }
+
+export default Page;
