@@ -10,17 +10,19 @@ class Transactions {
   }
 
   @action
-  setTransactions = (transactions: Transaction[]) => {
+  setTransactions = (transactions: Transaction[]): void => {
     this.transactions = transactions;
   }
 
-  fetchTransactions = () => {
+  fetchTransactions = (): void => {
     api.fetchTransactions()
       .then((response) => {
         this.setTransactions(response.data);
       })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }
 
-const transactionsStore = new Transactions();
-export default transactionsStore;
+export default Transactions;
