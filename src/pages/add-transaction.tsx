@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import AddTransaction from '../components/add-transaction/add-transaction';
 import Page from '../layouts/page';
 import {api} from '../service/api';
-import categoriesStore from '../store/categories';
+import {categoriesStore} from '../store';
 
 const AddTransactionPage: React.FunctionComponent = observer(() => {
   const {categories, fetchCategories} = categoriesStore;
@@ -42,6 +42,9 @@ const AddTransactionPage: React.FunctionComponent = observer(() => {
           if (response) {
             router.push('/transactions');
           }
+        })
+        .catch((error) => {
+          console.log(error)
         });
     }
   };

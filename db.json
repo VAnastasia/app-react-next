@@ -47,6 +47,12 @@
       "income": true,
       "expense": false,
       "id": 8
+    },
+    {
+      "name": "test",
+      "income": true,
+      "expense": false,
+      "id": 9
     }
   ],
   "transactions": [
@@ -76,6 +82,33 @@
       "sum": 200000,
       "comment": "",
       "id": 3
+    },
+    {
+      "date": "27-07-2021",
+      "kind": "income",
+      "category": "3",
+      "source": "1",
+      "sum": 200000,
+      "comment": "",
+      "id": 4
+    },
+    {
+      "date": "01-08-2021",
+      "kind": "expense",
+      "category": "2",
+      "source": "1",
+      "sum": 1000,
+      "comment": "",
+      "id": 5
+    },
+    {
+      "date": "01-08-2021",
+      "kind": "income",
+      "category": "1",
+      "source": "2",
+      "sum": 100000,
+      "comment": "",
+      "id": 6
     }
   ]
 }
