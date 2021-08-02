@@ -75,24 +75,6 @@
       "id": 2
     },
     {
-      "date": "17-07-2021",
-      "kind": "income",
-      "category": "3",
-      "source": "1",
-      "sum": 200000,
-      "comment": "",
-      "id": 3
-    },
-    {
-      "date": "27-07-2021",
-      "kind": "income",
-      "category": "3",
-      "source": "1",
-      "sum": 200000,
-      "comment": "",
-      "id": 4
-    },
-    {
       "date": "01-08-2021",
       "kind": "expense",
       "category": "2",
@@ -102,13 +84,22 @@
       "id": 5
     },
     {
-      "date": "01-08-2021",
+      "date": "02-08-2021",
       "kind": "income",
       "category": "1",
       "source": "2",
-      "sum": 100000,
+      "sum": 10000,
       "comment": "",
       "id": 6
+    },
+    {
+      "date": "02-08-2021",
+      "kind": "expense",
+      "category": "2",
+      "source": "2",
+      "sum": 1000,
+      "comment": "",
+      "id": 7
     }
   ]
 }
