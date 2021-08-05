@@ -18,7 +18,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "experimentalDecorators": true,
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "noImplicitAny": true
   },
   "include": [
     "next-env.d.ts",

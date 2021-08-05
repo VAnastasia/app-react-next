@@ -3,7 +3,7 @@ import {api} from '../service/api';
 import {Category} from '../types';
 
 class Categories {
-  @observable categories = []
+  @observable categories :Category[] = []
 
   constructor() {
     makeAutoObservable(this)

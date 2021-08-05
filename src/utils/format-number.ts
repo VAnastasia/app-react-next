@@ -1,5 +1,5 @@
-const formatNumberCurrency = (number: number): string  => {
+const formatNumberCurrencyRub = (number: number): string  => {
   return new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(number);
 }
 
-export {formatNumberCurrency};
+export {formatNumberCurrencyRub};

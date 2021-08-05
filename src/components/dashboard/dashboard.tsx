@@ -4,7 +4,7 @@ import {
   Paper
 } from '@material-ui/core';
 import React from 'react';
-import {formatNumberCurrency} from '../../utils/format-number';
+import {formatNumberCurrencyRub} from '../../utils/format-number';
 
 
 interface Props {
@@ -21,13 +21,13 @@ const Dashboard: React.FunctionComponent<Props> = ({balanceCash, balanceCard}: P
             <Paper className='paper'>
               <h2 className='dashboard__title'>Мои счета</h2>
               <p className='dashboard__subtitle'>Баланс</p>
-              <p className='dashboard__text'>{formatNumberCurrency(balanceCash + balanceCard)}</p>
+              <p className='dashboard__text'>{formatNumberCurrencyRub(balanceCash + balanceCard)}</p>
 
               <p className='dashboard__subtitle'>Наличные</p>
-              <p className='dashboard__text'>{formatNumberCurrency(balanceCash)}</p>
+              <p className='dashboard__text'>{formatNumberCurrencyRub(balanceCash)}</p>
 
               <p className='dashboard__subtitle'>Карты</p>
-              <p className='dashboard__text'>{formatNumberCurrency(balanceCard)}</p>
+              <p className='dashboard__text'>{formatNumberCurrencyRub(balanceCard)}</p>
 
             </Paper>
           </Grid>

@@ -3,7 +3,7 @@ import {api} from '../service/api';
 import {Transaction} from '../types';
 
 class Transactions {
-  @observable transactions = []
+  @observable transactions: Transaction[] = []
 
   constructor() {
     makeAutoObservable(this)
@@ -17,11 +17,11 @@ class Transactions {
   @computed
   get balanceCash(): number {
     return this.transactions
-      .filter((transaction) => transaction.source === '2')
-      .reduce((total, transaction) => {
+      .filter((transaction: Transaction) => transaction.source === '2')
+      .reduce((total: number, transaction: Transaction) => {
         if (transaction.kind === 'income') {
           total += transaction.sum;
-        } else {
+        } else if (transaction.kind === 'expense') {
           total -= transaction.sum;
         }
 
@@ -32,11 +32,11 @@ class Transactions {
   @computed
   get balanceCard(): number {
     return this.transactions
-      .filter((transaction) => transaction.source === '1')
-      .reduce((total, transaction) => {
+      .filter((transaction: Transaction) => transaction.source === '1')
+      .reduce((total: number, transaction: Transaction) => {
         if (transaction.kind === 'income') {
           total += transaction.sum;
-        } else {
+        } else if (transaction.kind === 'expense') {
           total -= transaction.sum;
         }
 
