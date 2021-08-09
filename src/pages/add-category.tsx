@@ -24,6 +24,9 @@ const AddCategoryPage: React.FunctionComponent = () => {
             router.push('/categories');
           }
         })
+        .catch((error) => {
+          console.log(error)
+        });
       }
   };
 

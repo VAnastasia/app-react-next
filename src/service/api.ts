@@ -26,7 +26,7 @@ class API {
       const result = await this._api.post('/categories', form);
       if (result.status === 201) {
         return true;
-      };
+      }
       return false;
     } catch (error) {
       console.log(error)
@@ -47,7 +47,7 @@ class API {
       const result = await this._api.post('/transactions', form);
       if (result.status === 201) {
         return true;
-      };
+      }
       return false;
     } catch (error) {
       console.log(error)

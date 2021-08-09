@@ -3,24 +3,26 @@ import {api} from '../service/api';
 import {Category} from '../types';
 
 class Categories {
-  @observable categories = []
+  @observable categories :Category[] = []
 
   constructor() {
     makeAutoObservable(this)
   }
 
   @action
-  setCategories = (categories: Category[]) => {
+  setCategories = (categories: Category[]): void => {
     this.categories = categories;
   }
 
-  fetchCategories = () => {
+  fetchCategories = (): void => {
     api.fetchCategories()
       .then((response) => {
         this.setCategories(response.data);
       })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }
 
-const categoriesStore = new Categories();
-export default categoriesStore;
+export default Categories;
